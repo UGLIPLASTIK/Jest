@@ -1,10 +1,7 @@
-function calculateTotal(purchases) {
-  let result = 0;
-  for (let i = 0; i < purchases.length; i++) {
-    result += purchases[i].count * purchases[i].price;
-  }
-}
-
-module.exports = {
-  calculateTotal,
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
+export function calculateTotal(purchases) {
+  return purchases.reduce((total, item) => total + (item.count * item.price), 0);
 }

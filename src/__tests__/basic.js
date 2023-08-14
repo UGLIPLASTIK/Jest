@@ -1,4 +1,6 @@
-const { calculateTotal } = require('../src/calculate.js');
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-vars */
+import { calculateTotal } from '../calculate';
 
 test('basic test', () => {
   const result = 4;
@@ -11,7 +13,7 @@ test('calculateTotal sum', () => {
       id: 456,
       name: 'Война и мир',
       count: 3,
-      price: 400
+      price: 400,
     },
     {
       id: 77,
@@ -20,6 +22,7 @@ test('calculateTotal sum', () => {
       price: 1300,
     },
   ];
-});
 
-const result = calculateTotal(list);
+  const result = calculateTotal(list);
+  expect(result).toBe(2500);
+});
